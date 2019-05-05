@@ -1,6 +1,6 @@
 body{
   font-family: Arial, Helvetica, sans-serif;
-  font-size:16px;
+  font-size:1em;
   line-height: 1.5;
   /*font: 16px/1.5 Arial, Helvetica, sans-serif;*/
   padding: 0;
@@ -23,11 +23,17 @@ header ul{
 }
 
 .dark{
-  padding:15px;
+  padding:0 1em;
   background:#35424a;
   color:#ffffff;
-  margin-top:10px;
-  margin-bottom:10px;
+  margin-top:0.6em;
+  margin-bottom:0.6em;
+  border:2px solid #35424a;
+  border-radius: 15px;
+}
+
+p{
+  margin:1em 0 1em;
 }
 
 /****************************
@@ -36,16 +42,24 @@ HEADER
 header{
   background:#35424a;
   color:#ffffff;
-  padding-top:30px;
-  min-height: 70px;
-  border-bottom:#e8491d 3px solid;
+  padding-top:2em;
+  min-height:4em;
+  border-bottom:#e8491d 0.15em solid;
 }
 
-header a{
+header h1 a{
+  color:#ffffff;
+  text-decoration:none;
+  transition-property: all;
+  transition-duration: 50ms;
+  transition-delay: 10ms;
+}
+
+header nav a{
   color:#ffffff;
   text-decoration:none;
   text-transform: uppercase;
-  font-size:16px;
+  font-size:1em;
   transition-property: all;
   transition-duration: 50ms;
   transition-delay: 10ms;
@@ -53,15 +67,7 @@ header a{
 
 header li{
   display:inline;
-  padding:0 12px;
-}
-
-header li:first-child{
-  padding:0 12px 0 4px;
-}
-
-header li:last-child{
-  padding:0 0 0 12px;
+  padding:0.5em 0.75em;
 }
 
 header #branding{
@@ -69,13 +75,13 @@ header #branding{
 }
 
 header #branding h1{
-  margin:0 20px 0 0;
+  margin:0;
   font-size: 2em;
 }
 
 header nav{
-  margin-top:15px;
-  margin-bottom: 10px;
+  margin-top:1em;
+  margin-bottom:1em;
   float: right;
 }
 
@@ -84,7 +90,7 @@ header .highlight, header .current a{
   font-weight: bold;
 }
 
-header a:hover{
+header nav a:hover{
   color:#e8491d;
   font-weight:bold;
 }
@@ -93,8 +99,8 @@ header a:hover{
 SHOWCASE
 ****************************/
 #showcase{
-  min-height: 350px;
-  background:url('../img/laptop_tablet_mobile_1920pxg_30.jpg') no-repeat 0 -5px; /*miscam imaginea in sus pe verticala cu 5px*/
+  min-height: 22em;
+  background:url('../img/laptop_tablet_mobile_1920pxg_30.jpg') no-repeat 0 -0.3em; /*miscam imaginea in sus pe verticala cu 5px*/
   background-position: center center; /*centrarea imaginii de fundal*/
   background-color:#35424a;
   /*opacity: .5; transparenta imaginii de fundal*/
@@ -103,52 +109,53 @@ SHOWCASE
 }
 
 #showcase h1{
-  margin-top:60px;
-  font-size:45px;
-  margin-bottom:30px;
+  margin-top:2em;
+  font-size:2.8em;
+  margin-bottom:0.5em;
 }
 
 #showcase p{
-  font-size:20px;
-  margin-bottom: 40px;
+  font-size:1.25em;
+  margin: 0 0 2.5em;
 }
 
 /****************************
 NEWSLETTER
 ****************************/
 #newsletter{
-  padding: 15px;
+  padding: 0.75em;
   color:#ffffff;
   background:#35424a;
 }
 
 #newsletter h1{
   float:left;
-  margin: 15px 0px 10px 0px;
-  font-size: 25px;
+  margin: 0.5em 0 0.5em 0;
+  font-size: 1.5em;
 }
 
-#newsletter form{
+#newsletter_form{
   float:right;
-  margin: 15px 0px 10px 0px;
+  margin: 1.12em 0 1.12em 0;
   }
 
 #newsletter input{
   border: 2px solid #f4f4f4;
   border-radius: 7px;
-  font-size: 19px;
-  margin: 0 0 15px 0;
+  font-size:1em;
+  margin:0 1em;
+  padding:2px 5px;
 }
 
 #newsletter .button_1{
-  font-size: 19px;
+  font-size: 1em;
   color: #35424a;
   background: #f4f4f4;
   border: 2px solid #f4f4f4;
   border-radius: 7px;
-  margin: 0 0 15px 30px;
-  padding:2px 20px;
-  width:120px;
+  margin:0;
+  padding:2px 5px;
+  width:7em;
   transition-property: all;
   transition-duration: 50ms;
   transition-delay: 10ms;
@@ -165,7 +172,7 @@ NEWSLETTER
 BOX
 ****************************/
 #boxes{
-  margin-top:20px;
+  margin-top:1.25em;
 }
 
 #boxes .box{
@@ -188,7 +195,23 @@ BOX
 ****************************/
 article#main-col{
   float:left;
-  width:65%;
+  width:60%;
+  }
+
+h1.page-title{
+  font-size: 1.5em;
+  margin:1em 0;
+}
+
+#main article#main-col ul#services li{
+  border:2px solid #cccccc;
+  border-radius: 15px;
+  margin:1em auto;
+  padding:0.5em 2em;
+}
+
+#main article#main-col h3{
+  margin:1em 0;
 }
 
 /****************************
@@ -196,27 +219,33 @@ SIDEBAR
 ****************************/
 aside#side-bar{
   float: right;
-  width:30%;
-  margin-top:10px;
+  width:35%;
+  margin-top:1em;
 }
 
-aside#side-bar .quote input, aside#side-bar .quote textarea{
+aside#side-bar .quote input,
+aside#side-bar .quote textarea{
   width:88%;
-  padding:5%;
+  padding:2%;
+  margin-bottom:1em;
+  font-size: 1em;
+  border: 2px solid #f4f4f4;
+  border-radius: 7px;
 }
 
 /****************************
 QUOTE
 ****************************/
 .quote .button_1{
-  font-size: 19px;
+  font-size: 1em;
   color: #35424a;
   background: #f4f4f4;
   border: 2px solid #f4f4f4;
   border-radius: 7px;
-  margin: 0 0 15px 30px;
-  padding:2px 20px;
-  width:140px;
+  margin: auto;
+  margin-bottom: 1.5em;
+  padding:2px 1.25em;
+  width:93%;
   transition-property: all;
   transition-duration: 50ms;
   transition-delay: 10ms;
@@ -232,11 +261,16 @@ QUOTE
 /****************************
 SERVICES
 ****************************/
+ul#services{
+  margin:0;
+  padding:0;
+}
+
 ul#services li{
   list-style: none;
-  padding:20px;
+  padding:1.25em;
   border: #cccccc solid 1px;
-  margin-bottom: 5px;
+  margin-bottom: 0.3em;
   background: #e6e6e6;
 }
 
@@ -244,8 +278,8 @@ ul#services li{
 FOOTER
 ****************************/
 footer {
-  padding:20px;
-  margin-top:20px;
+  padding:1.25em;
+  margin-top:1.25em;
   text-align: center;
   background-color: #e8491d;
   color:#ffffff;
@@ -254,6 +288,7 @@ footer {
 /****************************
 MEDIA QUERIES
 ****************************/
+
 /*
 @media screen and (max-width:992px){
   #boxes .box{
@@ -301,7 +336,10 @@ MEDIA QUERIES
 }
 */
 /*varianta generala media*/
-@media(max-width:768px){
+@media(max-width:1000px){
+  /*body{
+    display: none;
+  } /*testul pentru media*/
   header #branding,
   header nav,
   header nav li,
@@ -311,28 +349,30 @@ MEDIA QUERIES
   article#main-col,
   aside#side-bar{
     float:none;
-    text-align: center;
+    text-align:center;
     width:100%;
+  }
+  #newsletter input{
+    float:none;
+    width:93%;
+    margin:0 0 1em 0;
+  }
+  #newsletter .button_1{
+    float:none;
+    width:98%;
+    margin:0 0 1em 0;
   }
   header{
-    padding-bottom: 20px;
+    padding-bottom: 0.25em;
   }
   #showcase h1{
-    margin-top:40px;
+    margin-top:2.5em;
   }
-  ul#services{
-    padding:0;
-    margin:0;
-  }
-  #newsletter form input[type="email"],
-  .quote input, .quote textarea{
-    width:98%;
-    margin-bottom:10px;
-  }
-  #newsletter .button_1,
-  .quote button_1{
-    display:block;
-    width:100%;
-    margin:0;
+  aside#side-bar form.quote input,
+  aside#side-bar form.quote textarea,
+  form.quote button.button_1{
+    display: block;
+    width:90%;
+    margin:0 0 1.8em 0;
   }
 }
