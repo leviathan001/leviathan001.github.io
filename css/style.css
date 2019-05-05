@@ -352,6 +352,14 @@ MEDIA QUERIES
     text-align:center;
     width:100%;
   }
+  article#main-col p,
+  aside#side-bar p,
+  aside#side-bar ul{
+    text-align: left;
+  }
+  div.dark{
+    margin-top:2.5em;
+  }
   #newsletter input{
     float:none;
     width:93%;
@@ -359,7 +367,7 @@ MEDIA QUERIES
   }
   #newsletter .button_1{
     float:none;
-    width:98%;
+    width:96%;
     margin:0 0 1em 0;
   }
   header{
