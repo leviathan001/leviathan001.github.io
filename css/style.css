@@ -369,10 +369,14 @@ MEDIA QUERIES
     margin-top:2.5em;
   }
   aside#side-bar form.quote input,
-  aside#side-bar form.quote textarea,
-  form.quote button.button_1{
+  aside#side-bar form.quote textarea{
     display: block;
     width:90%;
     margin:0 0 1.8em 0;
+  }
+  form.quote button.button_1{
+    display: block;
+    width:95%;
+    margin:0 0 2em 0;
   }
 }
